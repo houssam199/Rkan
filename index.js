@@ -1,4 +1,7 @@
-const botSettings = require("./config.json");
+const botSettings = {
+"prefix": "S"
+"ytApiKey": "AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8"
+};
 const Discord = require("discord.js");
 const axios = require("axios");
 const yt = require("ytdl-core");
@@ -389,5 +392,4 @@ function shuffle(queue) {
 /*---------------------*/
 /* MISC FUNCTIONS END */
 /*-------------------*/
-
-bot.login(botSettings.token);
+bot.login(process.env.BOT_TOKEN);
